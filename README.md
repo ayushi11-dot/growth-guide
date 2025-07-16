@@ -9,7 +9,7 @@
 
 ## 🌐 Live Preview
 
-🚀 [View on GitHub Pages](https://your-username.github.io/growthguide)
+🚀 [View on GitHub Pages](https://ayushi11-dot.github.io/growth-guide)
 
 > Replace `your-username` with your GitHub username after enabling GitHub Pages.
 
