@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #305ab4, #1b6088);
+            color: white;
+            padding-top: 60px; /* Add space to prevent content overlap */
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: #f0ffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw 8vw;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+        }
+
+        nav .logo {
+            width: 65px;
+            cursor: pointer;
+        }
+
+        nav .navigation {
+            display: flex;
+        }
+
+        #menu-btn {
+            width: 30px;
+            height: 30px;
+            display: none;
+        }
+
+        #menu-close {
+            display: none;
+        }
+
+        nav .navigation ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav .navigation ul li {
+            list-style: none;
+            margin-left: 30px;
+        }
+
+        nav .navigation ul li a {
+            text-decoration: none;
+            color: rgb(21, 21, 100);
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav .navigation ul li a.active,
+        nav .navigation ul li a:hover {
+            color: #FDC93B;
+        }
+
+        /* Adjustments for smaller screens */
+        @media screen and (max-width: 768px) {
+            nav .navigation ul {
+                display: none;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #f0ffff;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            nav .navigation ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            #menu-close {
+                display: block;
+            }
+        }
+
+        .welcome-container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .welcome-container h1 {
+            font-size: 3rem;
+            margin: 0 0 10px;
+        }
+
+        .welcome-container p {
+            font-size: 1.2rem;
+            margin: 10px 0 20px;
+        }
+
+        .welcome-container .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .welcome-container .button-group a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: white;
+            color: #4588c7;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .welcome-container .button-group a:hover {
+            background: #4588c7;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.jpg" class="logo" alt="Website Logo">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <img src="img/menu.png" id="menu-btn" alt="Menu">
+        </div>
+    </nav>
+    
+    <div class="welcome-container">
+        <h1>Welcome to Your Personalized Dashboard</h1>
+        <p>Your one-stop solution for enhancing your skills seamlessly.</p>
+        <div class="button-group">
+            <a href="courses.html">Get Started</a>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuClose = document.getElementById('menu-close');
+        const navigation = document.querySelector('.navigation ul');
+
+        menuBtn.addEventListener('click', () => {
+            navigation.style.display = 'block';
+            menuBtn.style.display = 'none';
+            menuClose.style.display = 'block';
+        });
+
+        menuClose.addEventListener('click', () => {
+            navigation.style.display = 'none';
+            menuBtn.style.display = 'block';
+            menuClose.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

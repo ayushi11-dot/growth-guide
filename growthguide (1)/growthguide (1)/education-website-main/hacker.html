@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d6b3da;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin: 0 0 15px;
+            font-size: 1.8em;
+            color: #0073e6;
+        }
+        .section p {
+            margin: 0 0 15px;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        #results {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f4f4f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HackerRank & LeetCode Integration</h1>
+        <p>Seamlessly manage your coding practice and progress.</p>
+    </header>
+    <div class="container">
+        <!-- Unified Dashboard -->
+        <div class="section">
+            <h2>Dashboard</h2>
+            <p>Track your progress and stats across both platforms in one place.</p>
+            <div class="buttons">
+                <a href="#" class="button">View HackerRank Stats</a>
+                <a href="#" class="button">View LeetCode Stats</a>
+            </div>
+        </div>
+
+        <!-- Problem Aggregator -->
+        <div class="section">
+            <h2>Problem Search</h2>
+            <p>Find problems from both platforms quickly and easily:</p>
+            <input type="text" id="search" placeholder="Search problems...">
+            <button class="button" onclick="searchProblems()">Search</button>
+            <div id="results"></div>
+        </div>
+
+        <!-- Learning Hub -->
+        <div class="section">
+            <h2>Learning Tracks</h2>
+            <p>Enhance your skills with curated learning tracks and challenges:</p>
+            <ul>
+                <li><a href="https://www.hackerrank.com/domains/tutorials/10-days-of-javascript" target="_blank">10 Days of JavaScript (HackerRank)</a></li>
+                <li><a href="https://leetcode.com/explore/learn/" target="_blank">Learn Tracks (LeetCode)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Integration Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function searchProblems() {
+            const query = document.getElementById('search').value;
+            const resultsDiv = document.getElementById('results');
+
+            // Example: Display mock results (actual integration requires API access)
+            resultsDiv.innerHTML = `
+                <p>Results for "${query}":</p>
+                <ul>
+                    <li><a href="https://www.hackerrank.com/" target="_blank">Sample HackerRank Problem</a></li>
+                    <li><a href="https://leetcode.com/" target="_blank">Sample LeetCode Problem</a></li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
