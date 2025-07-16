@@ -9,7 +9,7 @@
 
 ## 🌐 Live Preview
 
-🚀 [View on GitHub Pages](https://ayushi11-dot.github.io/growth-guide)
+🚀 [View on GitHub Pages](https://ayushi11-dot.github.io/growthguide)
 
 
 
