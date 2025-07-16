@@ -5,13 +5,13 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
-> Your personal dashboard for self-growth, productivity, and reflection.
+
 
 ## 🌐 Live Preview
 
 🚀 [View on GitHub Pages](https://ayushi11-dot.github.io/growth-guide)
 
-> Replace `your-username` with your GitHub username after enabling GitHub Pages.
+
 
 ---
 
